@@ -5,7 +5,9 @@ using UnityEngine;
 public class FadeButtonBehavior : MonoBehaviour
 {
 
-    int n = 0;
+    #region FIELDS
+    public GameObject ButtonManager;
+    #endregion
 
     public void OnButtonPress()
     {
@@ -15,11 +17,7 @@ public class FadeButtonBehavior : MonoBehaviour
         Vector3 newRot = new Vector3(0, 0, 0);
 
         // Use Fade Movement Script
-        //StartCoroutine(GameObject.FindObjectOfType<PosFader>().FadeAndMove(newPos, newRot));
-
-        // Display for Testing
-        n++;
-        Debug.Log("Button clicked " + n + " times.");
+        StartCoroutine(ButtonManager.GetComponent<PositionFade>().FadeAndMove(newPos, newRot));
 
     }
 
