@@ -1,3 +1,4 @@
 # Unity Sandbox
 
-Small playground for unity scripting & things.
+Test Unity Project for Educational Purposes
+
